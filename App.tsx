@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {Text, View, StyleSheet, Image, Button, Alert} from 'react-native';
+import {Text, View, StyleSheet, Image, Button, Alert, ImageBackground} from 'react-native';
+import ListaPlana from './components/ListaPlana'
 import CompUm from './components/comp1';
 import Caixas from './components/Caixas';
 import Estilos from './styles/style.js';
@@ -37,13 +38,17 @@ const metade=(n)=>{
 
 */
 
+const imgbg = './assets/background.jpg'
+
 export default function App1() {
   let maybeExibir = true;
   return (
     
       <View style={Estilos.conteiner}>
+
         {/* <Image source={require('./assets/logo-cam.jpg')} style={estilos.logo} /> */}
         
+        {/*
         <Button
           title="Mostrar mensagem"
           onPress={()=>Alert.alert('Objetivo','Curso de React Native.')}
@@ -59,12 +64,18 @@ export default function App1() {
         {maybeExibir ? <Text>Telegram</Text> : <Text>WhatsApp</Text>}
         {maybeExibir && <Text>and Behance</Text>}
         <Caixas exibir={maybeExibir} />
+        */}
+        <ImageBackground source={require(imgbg)} resizeMode="cover" style={{flex: 1, width: "100%"}}>
+        <Text>CFB Cursos</Text>
+        <Text>Curso de React Native</Text>
+        <ListaPlana/>
+        </ImageBackground>
       </View>
     
   );
 }
 
-/* Estilo da imagem */
+/* Estilo da imagem 
 
 const estilos = StyleSheet.create({
   logo: {
@@ -72,6 +83,8 @@ const estilos = StyleSheet.create({
     resizeMode: 'contain',
   },
 });
+
+*/
 
 /* Estilos na mesma página
 
