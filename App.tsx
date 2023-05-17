@@ -10,6 +10,7 @@ import Caixas from './components/Caixas'
 import Estilos from './styles/style.js'
 
 export default function App1(){
+  let maybeExibir = true;
   return(
     <View style={Estilos.conteiner}>
       <Text style={{ color: '#f00' }}>Cursos</Text>
@@ -19,7 +20,9 @@ export default function App1(){
       <CompUm curso="JavaScript" nota="8.5"/>
       <Text style={Estilos.textoPadrao}>youtube.com</Text>
       <Text style={Estilos.textoTitulo}>facebook.com</Text>
-      <Caixas/>
+      {maybeExibir ? <Text>Telegram</Text> : <Text>WhatsApp</Text>}
+      {maybeExibir && <Text>and Behance</Text>}
+      <Caixas exibir={maybeExibir}/>
     </View>
   );
 };
