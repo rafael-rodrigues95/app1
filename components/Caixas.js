@@ -38,7 +38,7 @@ export default function (props) {
             <View style={{flexGrow: 3, backgroundColor:'#500'}}></View>            
         </View>*/
 
-        /* Renderização condicionla */
+        /* Renderização condicional */
 
         <View style={{ width: '100%', height: 300, flexDirection: 'column', justifyContent: 'center', alignItems: 'stretch' }}>
             {
