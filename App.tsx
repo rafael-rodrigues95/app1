@@ -13,6 +13,10 @@ import ListaPlana from './components/ListaPlana';
 import CompUm from './components/comp1';
 import Caixas from './components/Caixas';
 import Estilos from './styles/style.js';
+import CarroClasse from './components/CarroClasse';
+import CarroFuncional from './components/CarroFuncional';
+import SwitchTeste from './components/SwitchTeste';
+import CaixaDeTexto from './components/CaixaDeTexto';
 
 /* Exemplos de functions
 
@@ -50,7 +54,7 @@ const imgbg = './assets/background.jpg';
 
 export default function App1() {
   let maybeExibir = true; // Usado na renderização condicional
-  const [ligado, setLigado]=useState(false)
+  const [ligado, setLigado]=useState(false) // Usado na manipulação do state
   return (
     <View style={Estilos.conteiner}>
       {/* <Image source={require('./assets/logo-cam.jpg')} style={estilos.logo} /> */}
@@ -80,6 +84,7 @@ export default function App1() {
         </ImageBackground>
       */}
       
+      {/* Manipulação do state
       <Button
         title={ligado ? "Desligar" : "Ligar"}
         onPress={()=>setLigado(!ligado)}
@@ -91,7 +96,20 @@ export default function App1() {
         </View>
        : 
         <Text>Algum texto</Text>
-      }
+      }*/}
+
+      {/* Botões e Switch
+      <View>
+        <CarroClasse nome="Corsa"/>
+        <CarroClasse nome="Golf"/>
+        <CarroFuncional nome="Cros Fox"/>
+        <CarroFuncional nome="Palio"/>
+        <SwitchTeste nome="Barramento"/>
+      </View>
+    */}
+
+    <CaixaDeTexto/>
+
     </View>
   );
 }
