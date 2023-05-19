@@ -8,7 +8,7 @@ import {
   Button,
   Alert,
   ImageBackground,
-  StatusBar
+  StatusBar,
 } from 'react-native';
 import ListaPlana from './components/ListaPlana';
 import CompUm from './components/comp1';
@@ -62,10 +62,14 @@ export default function App1() {
 
   return (
     <View style={Estilos.conteiner}>
+      {/* StatusBar
+
       <StatusBar 
         backgroundColor={'#0ff'}
         barStyle={'dark-content'}
       />
+    
+      */}
       {/* <Image source={require('./assets/logo-cam.jpg')} style={estilos.logo} /> */}
       {/*
         <Button
@@ -130,8 +134,7 @@ export default function App1() {
       </SafeAreaView>
      */}
 
-     <Rolagem/>
-
+      <Rolagem />
     </View>
   );
 }
