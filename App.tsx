@@ -8,11 +8,15 @@ import {
   Button,
   Alert,
   ImageBackground,
+  StatusBar
 } from 'react-native';
 import ListaPlana from './components/ListaPlana';
 import CompUm from './components/comp1';
 import Caixas from './components/Caixas';
 import Estilos from './styles/style.js';
+import {SafeAreaView} from 'react-native';
+import Tocavel from './components/Tocavel';
+import Rolagem from './components/Rolagem';
 import CarroClasse from './components/CarroClasse';
 import CarroFuncional from './components/CarroFuncional';
 import SwitchTeste from './components/SwitchTeste';
@@ -54,9 +58,14 @@ const imgbg = './assets/background.jpg';
 
 export default function App1() {
   let maybeExibir = true; // Usado na renderização condicional
-  const [ligado, setLigado]=useState(false) // Usado na manipulação do state
+  const [ligado, setLigado] = useState(false); // Usado na manipulação do state
+
   return (
     <View style={Estilos.conteiner}>
+      <StatusBar 
+        backgroundColor={'#0ff'}
+        barStyle={'dark-content'}
+      />
       {/* <Image source={require('./assets/logo-cam.jpg')} style={estilos.logo} /> */}
       {/*
         <Button
@@ -83,7 +92,7 @@ export default function App1() {
         <ListaPlana/>
         </ImageBackground>
       */}
-      
+
       {/* Manipulação do state
       <Button
         title={ligado ? "Desligar" : "Ligar"}
@@ -108,7 +117,20 @@ export default function App1() {
       </View>
     */}
 
+      {/* Caixa de Texto
+    
     <CaixaDeTexto/>
+
+  */}
+      {/* Componente Tocável
+      <SafeAreaView style={Estilos.conteiner}>
+        <Text style={Estilos.textoPadrao}>youtube.com</Text>
+        <Text style={Estilos.textoTitulo}>facebook.com</Text>
+        <Tocavel/>
+      </SafeAreaView>
+     */}
+
+     <Rolagem/>
 
     </View>
   );
